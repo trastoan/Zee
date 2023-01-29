@@ -13,20 +13,15 @@
 		DAF0586729873B0C00FDBBA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586629873B0C00FDBBA1 /* Assets.xcassets */; };
 		DAF0586A29873B0C00FDBBA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */; };
 		DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0587429873B0C00FDBBA1 /* ZeeTests.swift */; };
-		DAF0587F29873B0C00FDBBA1 /* ZeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0587E29873B0C00FDBBA1 /* ZeeUITests.swift */; };
-		DAF0588129873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */; };
 		DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */; };
+		DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589229873CD000FDBBA1 /* HTTPClient.swift */; };
+		DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589429873CF000FDBBA1 /* ServiceEndpoint.swift */; };
+		DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589829873D3400FDBBA1 /* NetworkMockTests.swift */; };
+		DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DAF0587129873B0C00FDBBA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAF0585229873B0C00FDBBA1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DAF0585929873B0C00FDBBA1;
-			remoteInfo = Zee;
-		};
-		DAF0587B29873B0C00FDBBA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAF0585229873B0C00FDBBA1 /* Project object */;
 			proxyType = 1;
@@ -45,10 +40,11 @@
 		DAF0586B29873B0C00FDBBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF0587029873B0C00FDBBA1 /* ZeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF0587429873B0C00FDBBA1 /* ZeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeTests.swift; sourceTree = "<group>"; };
-		DAF0587A29873B0C00FDBBA1 /* ZeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAF0587E29873B0C00FDBBA1 /* ZeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeUITests.swift; sourceTree = "<group>"; };
-		DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		DAF0589229873CD000FDBBA1 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DAF0589429873CF000FDBBA1 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
+		DAF0589829873D3400FDBBA1 /* NetworkMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockTests.swift; sourceTree = "<group>"; };
+		DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAF0587729873B0C00FDBBA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +70,6 @@
 			children = (
 				DAF0585C29873B0C00FDBBA1 /* Zee */,
 				DAF0587329873B0C00FDBBA1 /* ZeeTests */,
-				DAF0587D29873B0C00FDBBA1 /* ZeeUITests */,
 				DAF0585B29873B0C00FDBBA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +79,6 @@
 			children = (
 				DAF0585A29873B0C00FDBBA1 /* Zee.app */,
 				DAF0587029873B0C00FDBBA1 /* ZeeTests.xctest */,
-				DAF0587A29873B0C00FDBBA1 /* ZeeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +86,7 @@
 		DAF0585C29873B0C00FDBBA1 /* Zee */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0589129873CBC00FDBBA1 /* Network */,
 				DAF0588D29873B9300FDBBA1 /* Modules */,
 				DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */,
 				DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */,
@@ -113,18 +101,10 @@
 		DAF0587329873B0C00FDBBA1 /* ZeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0589629873D1100FDBBA1 /* NetworkTests */,
 				DAF0587429873B0C00FDBBA1 /* ZeeTests.swift */,
 			);
 			path = ZeeTests;
-			sourceTree = "<group>";
-		};
-		DAF0587D29873B0C00FDBBA1 /* ZeeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DAF0587E29873B0C00FDBBA1 /* ZeeUITests.swift */,
-				DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */,
-			);
-			path = ZeeUITests;
 			sourceTree = "<group>";
 		};
 		DAF0588D29873B9300FDBBA1 /* Modules */ = {
@@ -141,6 +121,24 @@
 				DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		DAF0589129873CBC00FDBBA1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0589229873CD000FDBBA1 /* HTTPClient.swift */,
+				DAF0589429873CF000FDBBA1 /* ServiceEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DAF0589629873D1100FDBBA1 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0589829873D3400FDBBA1 /* NetworkMockTests.swift */,
+				DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */,
+			);
+			path = NetworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,24 +179,6 @@
 			productReference = DAF0587029873B0C00FDBBA1 /* ZeeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DAF0587929873B0C00FDBBA1 /* ZeeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DAF0588A29873B0C00FDBBA1 /* Build configuration list for PBXNativeTarget "ZeeUITests" */;
-			buildPhases = (
-				DAF0587629873B0C00FDBBA1 /* Sources */,
-				DAF0587729873B0C00FDBBA1 /* Frameworks */,
-				DAF0587829873B0C00FDBBA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DAF0587C29873B0C00FDBBA1 /* PBXTargetDependency */,
-			);
-			name = ZeeUITests;
-			productName = ZeeUITests;
-			productReference = DAF0587A29873B0C00FDBBA1 /* ZeeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,10 +193,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					DAF0586F29873B0C00FDBBA1 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = DAF0585929873B0C00FDBBA1;
-					};
-					DAF0587929873B0C00FDBBA1 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = DAF0585929873B0C00FDBBA1;
 					};
@@ -237,7 +213,6 @@
 			targets = (
 				DAF0585929873B0C00FDBBA1 /* Zee */,
 				DAF0586F29873B0C00FDBBA1 /* ZeeTests */,
-				DAF0587929873B0C00FDBBA1 /* ZeeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +234,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAF0587829873B0C00FDBBA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
+				DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */,
 				DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */,
 				DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */,
+				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
 				DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,16 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */,
+				DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */,
 				DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DAF0587629873B0C00FDBBA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DAF0587F29873B0C00FDBBA1 /* ZeeUITests.swift in Sources */,
-				DAF0588129873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +267,6 @@
 			isa = PBXTargetDependency;
 			target = DAF0585929873B0C00FDBBA1 /* Zee */;
 			targetProxy = DAF0587129873B0C00FDBBA1 /* PBXContainerItemProxy */;
-		};
-		DAF0587C29873B0C00FDBBA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DAF0585929873B0C00FDBBA1 /* Zee */;
-			targetProxy = DAF0587B29873B0C00FDBBA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,42 +498,6 @@
 			};
 			name = Release;
 		};
-		DAF0588B29873B0C00FDBBA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.ZeeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Zee;
-			};
-			name = Debug;
-		};
-		DAF0588C29873B0C00FDBBA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.ZeeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Zee;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,15 +524,6 @@
 			buildConfigurations = (
 				DAF0588829873B0C00FDBBA1 /* Debug */,
 				DAF0588929873B0C00FDBBA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DAF0588A29873B0C00FDBBA1 /* Build configuration list for PBXNativeTarget "ZeeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DAF0588B29873B0C00FDBBA1 /* Debug */,
-				DAF0588C29873B0C00FDBBA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
