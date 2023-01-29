@@ -10,12 +10,12 @@
 		DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */; };
 		DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */; };
 		DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0586129873B0C00FDBBA1 /* ViewController.swift */; };
-		DAF0586529873B0C00FDBBA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586329873B0C00FDBBA1 /* Main.storyboard */; };
 		DAF0586729873B0C00FDBBA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586629873B0C00FDBBA1 /* Assets.xcassets */; };
 		DAF0586A29873B0C00FDBBA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */; };
 		DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0587429873B0C00FDBBA1 /* ZeeTests.swift */; };
 		DAF0587F29873B0C00FDBBA1 /* ZeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0587E29873B0C00FDBBA1 /* ZeeUITests.swift */; };
 		DAF0588129873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */; };
+		DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DAF0586129873B0C00FDBBA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAF0586429873B0C00FDBBA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF0586629873B0C00FDBBA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF0586929873B0C00FDBBA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF0586B29873B0C00FDBBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		DAF0587A29873B0C00FDBBA1 /* ZeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF0587E29873B0C00FDBBA1 /* ZeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeUITests.swift; sourceTree = "<group>"; };
 		DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,10 @@
 		DAF0585C29873B0C00FDBBA1 /* Zee */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0588D29873B9300FDBBA1 /* Modules */,
 				DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */,
 				DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */,
 				DAF0586129873B0C00FDBBA1 /* ViewController.swift */,
-				DAF0586329873B0C00FDBBA1 /* Main.storyboard */,
 				DAF0586629873B0C00FDBBA1 /* Assets.xcassets */,
 				DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */,
 				DAF0586B29873B0C00FDBBA1 /* Info.plist */,
@@ -125,6 +125,22 @@
 				DAF0588029873B0C00FDBBA1 /* ZeeUITestsLaunchTests.swift */,
 			);
 			path = ZeeUITests;
+			sourceTree = "<group>";
+		};
+		DAF0588D29873B9300FDBBA1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0588E29873B9E00FDBBA1 /* Root */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DAF0588E29873B9E00FDBBA1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0588F29873BAE00FDBBA1 /* RootRouter.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +249,6 @@
 			files = (
 				DAF0586A29873B0C00FDBBA1 /* LaunchScreen.storyboard in Resources */,
 				DAF0586729873B0C00FDBBA1 /* Assets.xcassets in Resources */,
-				DAF0586529873B0C00FDBBA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
 				DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */,
 				DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */,
 				DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */,
@@ -297,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DAF0586329873B0C00FDBBA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAF0586429873B0C00FDBBA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +450,9 @@
 				INFOPLIST_FILE = Zee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +460,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.Zee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,9 +481,9 @@
 				INFOPLIST_FILE = Zee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +491,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.Zee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
