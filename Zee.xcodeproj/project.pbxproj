@@ -18,6 +18,9 @@
 		DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589429873CF000FDBBA1 /* ServiceEndpoint.swift */; };
 		DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589829873D3400FDBBA1 /* NetworkMockTests.swift */; };
 		DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */; };
+		DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589D29873E5000FDBBA1 /* Post.swift */; };
+		DAF058A029873E5700FDBBA1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589F29873E5700FDBBA1 /* Comment.swift */; };
+		DAF058A229873EFB00FDBBA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058A129873EFB00FDBBA1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		DAF0589429873CF000FDBBA1 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		DAF0589829873D3400FDBBA1 /* NetworkMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockTests.swift; sourceTree = "<group>"; };
 		DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		DAF0589D29873E5000FDBBA1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DAF0589F29873E5700FDBBA1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		DAF058A129873EFB00FDBBA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		DAF0585C29873B0C00FDBBA1 /* Zee */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0589C29873E4800FDBBA1 /* Models */,
 				DAF0589129873CBC00FDBBA1 /* Network */,
 				DAF0588D29873B9300FDBBA1 /* Modules */,
 				DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */,
@@ -139,6 +146,16 @@
 				DAF0589A29873D5F00FDBBA1 /* NetworkTests.swift */,
 			);
 			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		DAF0589C29873E4800FDBBA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0589D29873E5000FDBBA1 /* Post.swift */,
+				DAF0589F29873E5700FDBBA1 /* Comment.swift */,
+				DAF058A129873EFB00FDBBA1 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +261,11 @@
 				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
 				DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */,
 				DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */,
+				DAF058A029873E5700FDBBA1 /* Comment.swift in Sources */,
 				DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */,
+				DAF058A229873EFB00FDBBA1 /* User.swift in Sources */,
 				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
+				DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */,
 				DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
