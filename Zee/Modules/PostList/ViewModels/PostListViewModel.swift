@@ -24,7 +24,7 @@ final class PostListViewModel: PostListModel {
     var service: PostServiceProtocol
     private var posts: [Post] = []
 
-    var title: String { "Posts List"}
+    var title: String { "Posts List" }
     var numberOfPosts: Int { return posts.count }
 
     //Bindings
@@ -44,6 +44,6 @@ final class PostListViewModel: PostListModel {
     func post(for index: Int) -> Post { posts[index] }
 
     func didSelectPost(at index: Int) {
-        print("Selected \(index)")
+        router.presentDetailsForPost(posts[index])
     }
 }

@@ -30,6 +30,18 @@
 		DAF058B929874C3F00FDBBA1 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */; };
 		DAF058BB29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */; };
 		DAF058BD29874FD100FDBBA1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */; };
+		DAF058C129880F6100FDBBA1 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058C029880F6100FDBBA1 /* UserEndpoint.swift */; };
+		DAF058C329880F6D00FDBBA1 /* CommentEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058C229880F6D00FDBBA1 /* CommentEndpoint.swift */; };
+		DAF058C529880F7700FDBBA1 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058C429880F7700FDBBA1 /* UserService.swift */; };
+		DAF058C829880F9300FDBBA1 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058C729880F9300FDBBA1 /* CommentService.swift */; };
+		DAF058CF2988183B00FDBBA1 /* PostDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058CE2988183B00FDBBA1 /* PostDetailsRouter.swift */; };
+		DAF058D12988184500FDBBA1 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D02988184500FDBBA1 /* PostDetailsViewModel.swift */; };
+		DAF058D32988185500FDBBA1 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D22988185500FDBBA1 /* PostDetailsViewController.swift */; };
+		DAF058D52988186300FDBBA1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D42988186300FDBBA1 /* UserInfoView.swift */; };
+		DAF058D72988186E00FDBBA1 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D62988186E00FDBBA1 /* CommentsView.swift */; };
+		DAF058D92988188400FDBBA1 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D82988188400FDBBA1 /* PostDetailsView.swift */; };
+		DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */; };
+		DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DC2988845700FDBBA1 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +81,18 @@
 		DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorExtension.swift; sourceTree = "<group>"; };
 		DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		DAF058C029880F6100FDBBA1 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		DAF058C229880F6D00FDBBA1 /* CommentEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEndpoint.swift; sourceTree = "<group>"; };
+		DAF058C429880F7700FDBBA1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DAF058C729880F9300FDBBA1 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		DAF058CE2988183B00FDBBA1 /* PostDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsRouter.swift; sourceTree = "<group>"; };
+		DAF058D02988184500FDBBA1 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		DAF058D22988185500FDBBA1 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		DAF058D42988186300FDBBA1 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		DAF058D62988186E00FDBBA1 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		DAF058D82988188400FDBBA1 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		DAF058DC2988845700FDBBA1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +160,7 @@
 		DAF0588D29873B9300FDBBA1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAF058C9298816D400FDBBA1 /* PostDetails */,
 				DAF058A9298743EC00FDBBA1 /* PostList */,
 				DAF0588E29873B9E00FDBBA1 /* Root */,
 			);
@@ -181,6 +206,8 @@
 		DAF058A3298740E700FDBBA1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAF058BF29880DD900FDBBA1 /* UserService */,
+				DAF058BE29880DD000FDBBA1 /* CommentService */,
 				DAF058A4298740F600FDBBA1 /* PostAPIService */,
 			);
 			path = Services;
@@ -237,8 +264,65 @@
 				DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */,
 				DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */,
 				DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */,
+				DAF058DC2988845700FDBBA1 /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAF058BE29880DD000FDBBA1 /* CommentService */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058C229880F6D00FDBBA1 /* CommentEndpoint.swift */,
+				DAF058C729880F9300FDBBA1 /* CommentService.swift */,
+			);
+			path = CommentService;
+			sourceTree = "<group>";
+		};
+		DAF058BF29880DD900FDBBA1 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058C029880F6100FDBBA1 /* UserEndpoint.swift */,
+				DAF058C429880F7700FDBBA1 /* UserService.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		DAF058C9298816D400FDBBA1 /* PostDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058CD2988182400FDBBA1 /* Router */,
+				DAF058CC2988181F00FDBBA1 /* ViewModels */,
+				DAF058CA2988181100FDBBA1 /* Views */,
+			);
+			path = PostDetails;
+			sourceTree = "<group>";
+		};
+		DAF058CA2988181100FDBBA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058D22988185500FDBBA1 /* PostDetailsViewController.swift */,
+				DAF058D42988186300FDBBA1 /* UserInfoView.swift */,
+				DAF058D62988186E00FDBBA1 /* CommentsView.swift */,
+				DAF058D82988188400FDBBA1 /* PostDetailsView.swift */,
+				DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAF058CC2988181F00FDBBA1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058D02988184500FDBBA1 /* PostDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAF058CD2988182400FDBBA1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058CE2988183B00FDBBA1 /* PostDetailsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +427,10 @@
 			files = (
 				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
 				DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */,
+				DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */,
+				DAF058D72988186E00FDBBA1 /* CommentsView.swift in Sources */,
 				DAF058B7298748C800FDBBA1 /* UIFontExtensions.swift in Sources */,
+				DAF058CF2988183B00FDBBA1 /* PostDetailsRouter.swift in Sources */,
 				DAF058B42987446D00FDBBA1 /* PostListViewModel.swift in Sources */,
 				DAF058A82987413D00FDBBA1 /* PostService.swift in Sources */,
 				DAF058A029873E5700FDBBA1 /* Comment.swift in Sources */,
@@ -353,10 +440,19 @@
 				DAF058A229873EFB00FDBBA1 /* User.swift in Sources */,
 				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
 				DAF058B22987445900FDBBA1 /* PostListTableViewCell.swift in Sources */,
+				DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */,
+				DAF058D12988184500FDBBA1 /* PostDetailsViewModel.swift in Sources */,
+				DAF058D92988188400FDBBA1 /* PostDetailsView.swift in Sources */,
+				DAF058D32988185500FDBBA1 /* PostDetailsViewController.swift in Sources */,
+				DAF058C329880F6D00FDBBA1 /* CommentEndpoint.swift in Sources */,
 				DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */,
+				DAF058C529880F7700FDBBA1 /* UserService.swift in Sources */,
 				DAF058BB29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift in Sources */,
+				DAF058C129880F6100FDBBA1 /* UserEndpoint.swift in Sources */,
 				DAF058A62987412B00FDBBA1 /* PostEndpoint.swift in Sources */,
 				DAF058AE2987443C00FDBBA1 /* PostListRouter.swift in Sources */,
+				DAF058C829880F9300FDBBA1 /* CommentService.swift in Sources */,
+				DAF058D52988186300FDBBA1 /* UserInfoView.swift in Sources */,
 				DAF058BD29874FD100FDBBA1 /* UIViewExtensions.swift in Sources */,
 				DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */,
 			);

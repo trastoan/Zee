@@ -12,7 +12,7 @@ protocol PostServiceProtocol {
     func deletePost(_ id: Int) async throws -> Bool
 }
 
-final class PostService: PostServiceProtocol {
+struct PostService: PostServiceProtocol {
     private let client: HTTPClient
 
     init(client: HTTPClient = HTTPWorker()) {
