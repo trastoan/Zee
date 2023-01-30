@@ -18,7 +18,7 @@ protocol PostDetailModel {
 }
 
 class PostDetailViewModel: PostDetailModel {
-    var title: String { post.title }
+    var title: String { "Details" }
 
     var post: Post
     var user: User?
@@ -35,6 +35,7 @@ class PostDetailViewModel: PostDetailModel {
         self.post = post
     }
 
+    @MainActor
     func loadExtraInformation() async throws {
         user = try await userService.userDetails(post.userId)
         comments = try await commentService.commentsForPost(post.id)

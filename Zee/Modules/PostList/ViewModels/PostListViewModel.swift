@@ -24,7 +24,7 @@ final class PostListViewModel: PostListModel {
     var service: PostServiceProtocol
     private var posts: [Post] = []
 
-    var title: String { "Posts List"}
+    var title: String { "Posts List" }
     var numberOfPosts: Int { return posts.count }
 
     //Bindings
