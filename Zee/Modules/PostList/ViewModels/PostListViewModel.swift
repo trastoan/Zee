@@ -44,6 +44,6 @@ final class PostListViewModel: PostListModel {
     func post(for index: Int) -> Post { posts[index] }
 
     func didSelectPost(at index: Int) {
-        print("Selected \(index)")
+        router.presentDetailsForPost(posts[index])
     }
 }

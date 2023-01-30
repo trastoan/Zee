@@ -27,6 +27,7 @@ final class PostListRouter: PostListRouterProtocol {
     }
 
     func presentDetailsForPost(_ post: Post) {
-        //MARK: TODO
+        let destination = PostDetailsRouter.assembleModule(for: post)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 }
