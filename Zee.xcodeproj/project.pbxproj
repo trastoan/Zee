@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */; };
 		DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */; };
-		DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0586129873B0C00FDBBA1 /* ViewController.swift */; };
 		DAF0586729873B0C00FDBBA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586629873B0C00FDBBA1 /* Assets.xcassets */; };
 		DAF0586A29873B0C00FDBBA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */; };
 		DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0587429873B0C00FDBBA1 /* ZeeTests.swift */; };
@@ -21,6 +20,16 @@
 		DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589D29873E5000FDBBA1 /* Post.swift */; };
 		DAF058A029873E5700FDBBA1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0589F29873E5700FDBBA1 /* Comment.swift */; };
 		DAF058A229873EFB00FDBBA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058A129873EFB00FDBBA1 /* User.swift */; };
+		DAF058A62987412B00FDBBA1 /* PostEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058A52987412B00FDBBA1 /* PostEndpoint.swift */; };
+		DAF058A82987413D00FDBBA1 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058A72987413D00FDBBA1 /* PostService.swift */; };
+		DAF058AE2987443C00FDBBA1 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058AD2987443C00FDBBA1 /* PostListRouter.swift */; };
+		DAF058B02987444B00FDBBA1 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058AF2987444B00FDBBA1 /* PostListViewController.swift */; };
+		DAF058B22987445900FDBBA1 /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058B12987445900FDBBA1 /* PostListTableViewCell.swift */; };
+		DAF058B42987446D00FDBBA1 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058B32987446D00FDBBA1 /* PostListViewModel.swift */; };
+		DAF058B7298748C800FDBBA1 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058B6298748C800FDBBA1 /* UIFontExtensions.swift */; };
+		DAF058B929874C3F00FDBBA1 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */; };
+		DAF058BB29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */; };
+		DAF058BD29874FD100FDBBA1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +46,6 @@
 		DAF0585A29873B0C00FDBBA1 /* Zee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAF0586129873B0C00FDBBA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAF0586629873B0C00FDBBA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF0586929873B0C00FDBBA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF0586B29873B0C00FDBBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,16 @@
 		DAF0589D29873E5000FDBBA1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DAF0589F29873E5700FDBBA1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		DAF058A129873EFB00FDBBA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DAF058A52987412B00FDBBA1 /* PostEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEndpoint.swift; sourceTree = "<group>"; };
+		DAF058A72987413D00FDBBA1 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		DAF058AD2987443C00FDBBA1 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		DAF058AF2987444B00FDBBA1 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		DAF058B12987445900FDBBA1 /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
+		DAF058B32987446D00FDBBA1 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		DAF058B6298748C800FDBBA1 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorExtension.swift; sourceTree = "<group>"; };
+		DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +110,13 @@
 		DAF0585C29873B0C00FDBBA1 /* Zee */ = {
 			isa = PBXGroup;
 			children = (
+				DAF058B5298748B600FDBBA1 /* Extensions */,
+				DAF058A3298740E700FDBBA1 /* Services */,
 				DAF0589C29873E4800FDBBA1 /* Models */,
 				DAF0589129873CBC00FDBBA1 /* Network */,
 				DAF0588D29873B9300FDBBA1 /* Modules */,
 				DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */,
 				DAF0585F29873B0C00FDBBA1 /* SceneDelegate.swift */,
-				DAF0586129873B0C00FDBBA1 /* ViewController.swift */,
 				DAF0586629873B0C00FDBBA1 /* Assets.xcassets */,
 				DAF0586829873B0C00FDBBA1 /* LaunchScreen.storyboard */,
 				DAF0586B29873B0C00FDBBA1 /* Info.plist */,
@@ -117,6 +136,7 @@
 		DAF0588D29873B9300FDBBA1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAF058A9298743EC00FDBBA1 /* PostList */,
 				DAF0588E29873B9E00FDBBA1 /* Root */,
 			);
 			path = Modules;
@@ -156,6 +176,69 @@
 				DAF058A129873EFB00FDBBA1 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAF058A3298740E700FDBBA1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058A4298740F600FDBBA1 /* PostAPIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAF058A4298740F600FDBBA1 /* PostAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058A52987412B00FDBBA1 /* PostEndpoint.swift */,
+				DAF058A72987413D00FDBBA1 /* PostService.swift */,
+			);
+			path = PostAPIService;
+			sourceTree = "<group>";
+		};
+		DAF058A9298743EC00FDBBA1 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058AC2987441B00FDBBA1 /* ViewModels */,
+				DAF058AB2987441500FDBBA1 /* View */,
+				DAF058AA2987441100FDBBA1 /* Router */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		DAF058AA2987441100FDBBA1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058AD2987443C00FDBBA1 /* PostListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAF058AB2987441500FDBBA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058AF2987444B00FDBBA1 /* PostListViewController.swift */,
+				DAF058B12987445900FDBBA1 /* PostListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAF058AC2987441B00FDBBA1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058B32987446D00FDBBA1 /* PostListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAF058B5298748B600FDBBA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058B6298748C800FDBBA1 /* UIFontExtensions.swift */,
+				DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */,
+				DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */,
+				DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,12 +343,21 @@
 			files = (
 				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
 				DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */,
-				DAF0586229873B0C00FDBBA1 /* ViewController.swift in Sources */,
+				DAF058B7298748C800FDBBA1 /* UIFontExtensions.swift in Sources */,
+				DAF058B42987446D00FDBBA1 /* PostListViewModel.swift in Sources */,
+				DAF058A82987413D00FDBBA1 /* PostService.swift in Sources */,
 				DAF058A029873E5700FDBBA1 /* Comment.swift in Sources */,
+				DAF058B02987444B00FDBBA1 /* PostListViewController.swift in Sources */,
+				DAF058B929874C3F00FDBBA1 /* UITableViewExtensions.swift in Sources */,
 				DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */,
 				DAF058A229873EFB00FDBBA1 /* User.swift in Sources */,
 				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
+				DAF058B22987445900FDBBA1 /* PostListTableViewCell.swift in Sources */,
 				DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */,
+				DAF058BB29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift in Sources */,
+				DAF058A62987412B00FDBBA1 /* PostEndpoint.swift in Sources */,
+				DAF058AE2987443C00FDBBA1 /* PostListRouter.swift in Sources */,
+				DAF058BD29874FD100FDBBA1 /* UIViewExtensions.swift in Sources */,
 				DAF0586029873B0C00FDBBA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@ protocol RootRouterProtocol {
 
 class RootRouter {
     static func presentEntryController(in window: UIWindow) {
-        window.rootViewController = ViewController()
+        window.rootViewController = PostListRouter.assembleModule()
         window.makeKeyAndVisible()
     }
 }
