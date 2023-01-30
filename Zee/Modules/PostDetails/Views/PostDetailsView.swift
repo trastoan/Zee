@@ -36,7 +36,7 @@ class PostDetailsView: UIView {
     }
 
     func setup(with post: Post) {
-        postTitleLabel.text = post.title
+        postTitleLabel.text = post.title.capitalizedFirstLetter
         postBodyLabel.text = post.body
     }
 

@@ -81,7 +81,7 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
         loadingIndicator.setupOn(view: view)
 
         NSLayoutConstraint.activate([
-            postDetails.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
+            postDetails.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             postDetails.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             postDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
 

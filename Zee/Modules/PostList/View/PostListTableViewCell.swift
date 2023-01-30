@@ -24,7 +24,8 @@ class PostListTableViewCell: UITableViewCell {
 
     func setup(_ post: Post) {
         self.selectionStyle = .none
-        postTitleLabel.text = post.title
+        self.accessoryType = .disclosureIndicator
+        postTitleLabel.text = post.title.capitalizedFirstLetter
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
