@@ -20,6 +20,13 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
         return details
     }()
 
+    private let userDetails: UserInfoView = {
+        let details = UserInfoView(frame: .zero)
+        details.isHidden = true
+        details.translatesAutoresizingMaskIntoConstraints = false
+        return details
+    }()
+
     private let loadingIndicator = UIActivityIndicatorView()
 
     override func viewDidLoad() {
@@ -47,19 +54,29 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
 
     private func setupAllDetails() {
         postDetails.setup(with: model.post)
+        
+        if let user = model.user {
+            userDetails.isHidden = false
+            userDetails.setup(with: user)
+        }
     }
 
     private func setupSubviews() {
         view.addSubview(postDetails)
+        view.addSubview(userDetails)
     }
 
     private func setupConstraints() {
         loadingIndicator.setupOn(view: view)
 
         NSLayoutConstraint.activate([
-            postDetails.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            postDetails.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
             postDetails.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            postDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            postDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+
+            userDetails.topAnchor.constraint(equalTo: postDetails.bottomAnchor, constant: 18),
+            userDetails.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            userDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
     }
 
