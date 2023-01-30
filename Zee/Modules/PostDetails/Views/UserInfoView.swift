@@ -10,7 +10,7 @@ import UIKit
 class UserInfoView: UIView {
 
     //MARK: Labels
-    let authorSectionLabel: UILabel = {
+    private let authorSectionLabel: UILabel = {
         let label = UILabel()
         label.text = "Author"
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -18,21 +18,21 @@ class UserInfoView: UIView {
         return label
     }()
 
-    let authorNameLabel: UILabel = {
+    private let authorNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.font(named: "Helvetica", size: 14, weight: .regular)
         return label
     }()
 
-    let companyLabel: UILabel = {
+    private let companyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.font(named: "Helvetica", size: 14, weight: .regular)
         return label
     }()
 
-    let addressLabel: UILabel = {
+    private let addressLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.font(named: "Helvetica", size: 14, weight: .regular)
@@ -41,7 +41,7 @@ class UserInfoView: UIView {
 
     //MARK: Stacks
 
-    lazy var iconStacks: UIStackView = {
+    private lazy var iconStacks: UIStackView = {
         let userIcon = imageForIcon(systemName: "person.circle.fill")
         let addressIcon = imageForIcon(systemName: "house.fill")
         let companyIcon = imageForIcon(systemName: "building.2.fill")
@@ -54,7 +54,7 @@ class UserInfoView: UIView {
         return stack
     }()
 
-    lazy var labelStacks: UIStackView = {
+    private lazy var labelStacks: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [authorNameLabel, addressLabel, companyLabel])
         stack.axis = .vertical
         stack.distribution = .equalCentering
@@ -63,7 +63,7 @@ class UserInfoView: UIView {
         return stack
     }()
 
-    lazy var infoStack: UIStackView = {
+    private lazy var infoStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [iconStacks])
         stack.axis = .horizontal
         stack.distribution = .fillProportionally
@@ -110,7 +110,8 @@ class UserInfoView: UIView {
 
             infoStack.topAnchor.constraint(equalTo: authorSectionLabel.bottomAnchor, constant: 8),
             infoStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 18),
-            infoStack.trailingAnchor.constraint(lessThanOrEqualTo: self.trailingAnchor, constant: -18)
+            infoStack.trailingAnchor.constraint(lessThanOrEqualTo: self.trailingAnchor, constant: -18),
+            infoStack.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }

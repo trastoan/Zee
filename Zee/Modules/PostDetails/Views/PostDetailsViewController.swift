@@ -27,6 +27,13 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
         return details
     }()
 
+    private let commentsList: CommentsView = {
+        let comments = CommentsView(frame: .zero)
+        comments.isHidden = true
+        comments.translatesAutoresizingMaskIntoConstraints = false
+        return comments
+    }()
+
     private let loadingIndicator = UIActivityIndicatorView()
 
     override func viewDidLoad() {
@@ -54,7 +61,10 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
 
     private func setupAllDetails() {
         postDetails.setup(with: model.post)
-        
+        if model.comments.count > 0 {
+            commentsList.setup(with: model.comments)
+            commentsList.isHidden = false
+        }
         if let user = model.user {
             userDetails.isHidden = false
             userDetails.setup(with: user)
@@ -64,6 +74,7 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
     private func setupSubviews() {
         view.addSubview(postDetails)
         view.addSubview(userDetails)
+        view.addSubview(commentsList)
     }
 
     private func setupConstraints() {
@@ -76,7 +87,12 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
 
             userDetails.topAnchor.constraint(equalTo: postDetails.bottomAnchor, constant: 18),
             userDetails.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            userDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            userDetails.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+
+            commentsList.topAnchor.constraint(equalTo: userDetails.bottomAnchor, constant: 18),
+            commentsList.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            commentsList.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            commentsList.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 

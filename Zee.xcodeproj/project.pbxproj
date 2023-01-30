@@ -40,6 +40,8 @@
 		DAF058D52988186300FDBBA1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D42988186300FDBBA1 /* UserInfoView.swift */; };
 		DAF058D72988186E00FDBBA1 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D62988186E00FDBBA1 /* CommentsView.swift */; };
 		DAF058D92988188400FDBBA1 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D82988188400FDBBA1 /* PostDetailsView.swift */; };
+		DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */; };
+		DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DC2988845700FDBBA1 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		DAF058D42988186300FDBBA1 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		DAF058D62988186E00FDBBA1 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		DAF058D82988188400FDBBA1 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		DAF058DC2988845700FDBBA1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				DAF058B829874C3F00FDBBA1 /* UITableViewExtensions.swift */,
 				DAF058BA29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift */,
 				DAF058BC29874FD100FDBBA1 /* UIViewExtensions.swift */,
+				DAF058DC2988845700FDBBA1 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				DAF058D42988186300FDBBA1 /* UserInfoView.swift */,
 				DAF058D62988186E00FDBBA1 /* CommentsView.swift */,
 				DAF058D82988188400FDBBA1 /* PostDetailsView.swift */,
+				DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			files = (
 				DAF0589029873BAE00FDBBA1 /* RootRouter.swift in Sources */,
 				DAF0589329873CD000FDBBA1 /* HTTPClient.swift in Sources */,
+				DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */,
 				DAF058D72988186E00FDBBA1 /* CommentsView.swift in Sources */,
 				DAF058B7298748C800FDBBA1 /* UIFontExtensions.swift in Sources */,
 				DAF058CF2988183B00FDBBA1 /* PostDetailsRouter.swift in Sources */,
@@ -433,6 +440,7 @@
 				DAF058A229873EFB00FDBBA1 /* User.swift in Sources */,
 				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
 				DAF058B22987445900FDBBA1 /* PostListTableViewCell.swift in Sources */,
+				DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */,
 				DAF058D12988184500FDBBA1 /* PostDetailsViewModel.swift in Sources */,
 				DAF058D92988188400FDBBA1 /* PostDetailsView.swift in Sources */,
 				DAF058D32988185500FDBBA1 /* PostDetailsViewController.swift in Sources */,

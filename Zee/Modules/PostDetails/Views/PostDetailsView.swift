@@ -53,7 +53,7 @@ class PostDetailsView: UIView {
 
             postBodyLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 18),
             postBodyLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -18),
-            postBodyLabel.topAnchor.constraint(equalTo: postTitleLabel.bottomAnchor, constant: 18),
+            postBodyLabel.topAnchor.constraint(equalTo: postTitleLabel.bottomAnchor, constant: 8),
             postBodyLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
