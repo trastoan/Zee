@@ -43,6 +43,7 @@
 		DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */; };
 		DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DC2988845700FDBBA1 /* StringExtension.swift */; };
 		DAF058E22989C05700FDBBA1 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058E12989C05700FDBBA1 /* FavoritesService.swift */; };
+		DAF059182989CEBB00FDBBA1 /* DeletedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF059172989CEBB00FDBBA1 /* DeletedService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		DAF058DC2988845700FDBBA1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAF058E12989C05700FDBBA1 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		DAF059172989CEBB00FDBBA1 /* DeletedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		DAF058A3298740E700FDBBA1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAF059162989CEAD00FDBBA1 /* DeletedService */,
 				DAF058E02989C04000FDBBA1 /* FavoritesService */,
 				DAF058BF29880DD900FDBBA1 /* UserService */,
 				DAF058BE29880DD000FDBBA1 /* CommentService */,
@@ -336,6 +339,14 @@
 			path = FavoritesService;
 			sourceTree = "<group>";
 		};
+		DAF059162989CEAD00FDBBA1 /* DeletedService */ = {
+			isa = PBXGroup;
+			children = (
+				DAF059172989CEBB00FDBBA1 /* DeletedService.swift */,
+			);
+			path = DeletedService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -459,6 +470,7 @@
 				DAF058C329880F6D00FDBBA1 /* CommentEndpoint.swift in Sources */,
 				DAF0589E29873E5000FDBBA1 /* Post.swift in Sources */,
 				DAF058C529880F7700FDBBA1 /* UserService.swift in Sources */,
+				DAF059182989CEBB00FDBBA1 /* DeletedService.swift in Sources */,
 				DAF058BB29874F8F00FDBBA1 /* UIActivityIndicatorExtension.swift in Sources */,
 				DAF058C129880F6100FDBBA1 /* UserEndpoint.swift in Sources */,
 				DAF058A62987412B00FDBBA1 /* PostEndpoint.swift in Sources */,
@@ -552,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -606,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -623,7 +635,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
+				DEVELOPMENT_TEAM = 489VWS49NR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -636,7 +648,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.Zee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Zee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -654,7 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
+				DEVELOPMENT_TEAM = 489VWS49NR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -667,7 +679,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.Zee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Zee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -685,11 +697,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
+				DEVELOPMENT_TEAM = 489VWS49NR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.ZeeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.ZeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -705,11 +717,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MK6VWXGP45;
+				DEVELOPMENT_TEAM = 489VWS49NR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.ZeeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.ZeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

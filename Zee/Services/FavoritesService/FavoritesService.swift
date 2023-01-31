@@ -32,7 +32,9 @@ class FavoriteServices: FavoriteServiceProtocol {
     }
 
     func removeFromFavorites(post: Post) {
+        print(favoritesID.count)
         favoritesID.removeAll(where: { $0 == post.id })
+        print(favoritesID.count)
     }
 
     func parseFavorites(posts: [Post]) -> [Post] {

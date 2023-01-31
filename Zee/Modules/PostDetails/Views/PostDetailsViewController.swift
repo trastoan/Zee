@@ -38,7 +38,7 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         title = model.title
         setupBinding()

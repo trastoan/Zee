@@ -26,7 +26,7 @@ class PostListViewController: UIViewController, PostListView {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = model.title
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         setupTable()
         setupModelCallback()
@@ -98,6 +98,13 @@ extension PostListViewController: UITableViewDataSource {
 extension PostListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         model.didSelectPost(at: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            model.deletePost(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+        }
     }
 }
 
