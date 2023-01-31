@@ -14,6 +14,14 @@ struct Post: Codable {
     var body: String
     var isFavorite: Bool
 
+    init(post: Post, isFavorite: Bool) {
+        self.userId = post.userId
+        self.id = post.id
+        self.title = post.title
+        self.body = post.body
+        self.isFavorite = isFavorite
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.userId = try container.decode(Int.self, forKey: .userId)

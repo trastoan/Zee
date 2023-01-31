@@ -38,6 +38,7 @@ final class PostListViewModel: PostListModel {
     @MainActor
     func fetch() async throws {
         posts = try await service.listAllPosts()
+        posts.sort(by: { $0.isFavorite && !$1.isFavorite })
         hasFinishedFetch?()
     }
 
