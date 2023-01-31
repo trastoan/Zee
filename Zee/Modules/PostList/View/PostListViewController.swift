@@ -38,6 +38,10 @@ class PostListViewController: UIViewController, PostListView {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        model.viewDidAppear()
+    }
+
     private func setupModelCallback() {
         model.hasFinishedFetch = { [weak self] in
             self?.animateLoadIndicator(isLoading: false)

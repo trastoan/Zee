@@ -7,13 +7,19 @@
 
 import Foundation
 
-class FavoriteServices {
+protocol FavoriteServiceProtocol {
+    func addToFavorites(post: Post)
+    func removeFromFavorites(post: Post)
+    func parseFavorites(posts: [Post]) -> [Post]
+}
+
+class FavoriteServices: FavoriteServiceProtocol {
     var userDefaults: UserDefaults
 
     let favoritesIDKey = "favoriteIDList"
 
     private var favoritesID: [Int] {
-        get { userDefaults.array(forKey: favoritesIDKey) as! [Int] }
+        get { userDefaults.array(forKey: favoritesIDKey) as? [Int] ?? [] }
         set { userDefaults.setValue(newValue, forKey: favoritesIDKey) }
     }
 
@@ -36,7 +42,7 @@ class FavoriteServices {
             if favorites.contains($0.id) {
                 parsed.append(Post(post: $0, isFavorite: true))
             } else {
-                parsed.append($0)
+                parsed.append(Post(post: $0, isFavorite: false))
             }
         }
 

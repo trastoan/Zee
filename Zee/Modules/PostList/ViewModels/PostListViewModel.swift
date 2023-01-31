@@ -16,12 +16,14 @@ protocol PostListModel {
     func fetch() async throws
     func post(for index: Int) -> Post
     func didSelectPost(at index: Int)
+    func viewDidAppear()
 }
 
 final class PostListViewModel: PostListModel {
 
     var router: PostListRouterProtocol
     var service: PostServiceProtocol
+    var favoriteService: FavoriteServiceProtocol
     private var posts: [Post] = []
 
     var title: String { "Posts List" }
@@ -30,15 +32,18 @@ final class PostListViewModel: PostListModel {
     //Bindings
     var hasFinishedFetch: (() -> Void)?
 
-    init(router: PostListRouterProtocol, service: PostServiceProtocol = PostService()) {
+    init(router: PostListRouterProtocol,
+        service: PostServiceProtocol = PostService(),
+        favoriteService: FavoriteServiceProtocol = FavoriteServices()) {
         self.router = router
         self.service = service
+        self.favoriteService = favoriteService
     }
 
     @MainActor
     func fetch() async throws {
         posts = try await service.listAllPosts()
-        posts.sort(by: { $0.isFavorite && !$1.isFavorite })
+        parsePosts()
         hasFinishedFetch?()
     }
 
@@ -46,5 +51,15 @@ final class PostListViewModel: PostListModel {
 
     func didSelectPost(at index: Int) {
         router.presentDetailsForPost(posts[index])
+    }
+
+    func viewDidAppear() {
+        parsePosts()
+        hasFinishedFetch?()
+    }
+
+    private func parsePosts() {
+        posts = favoriteService.parseFavorites(posts: posts)
+        posts.sort(by: { $0.isFavorite && !$1.isFavorite })
     }
 }
