@@ -44,8 +44,8 @@ class PostListViewController: UIViewController, PostListView {
 
     private func setupModelCallback() {
         model.hasFinishedFetch = { [weak self] in
-            self?.animateLoadIndicator(isLoading: false)
             self?.postTable.reloadData()
+            self?.animateLoadIndicator(isLoading: false)
         }
     }
 

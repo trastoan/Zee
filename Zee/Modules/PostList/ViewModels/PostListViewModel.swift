@@ -61,8 +61,8 @@ final class PostListViewModel: PostListModel {
     }
 
     func deletePost(at index: Int) {
-        posts.remove(at: index)
         deletedService.addToDeleted(post: posts[index])
+        posts.remove(at: index)
     }
 
     private func parsePosts() {
