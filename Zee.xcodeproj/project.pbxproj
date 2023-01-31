@@ -42,6 +42,7 @@
 		DAF058D92988188400FDBBA1 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058D82988188400FDBBA1 /* PostDetailsView.swift */; };
 		DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */; };
 		DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DC2988845700FDBBA1 /* StringExtension.swift */; };
+		DAF058E22989C05700FDBBA1 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058E12989C05700FDBBA1 /* FavoritesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		DAF058D82988188400FDBBA1 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		DAF058DA29887BF400FDBBA1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		DAF058DC2988845700FDBBA1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		DAF058E12989C05700FDBBA1 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		DAF058A3298740E700FDBBA1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAF058E02989C04000FDBBA1 /* FavoritesService */,
 				DAF058BF29880DD900FDBBA1 /* UserService */,
 				DAF058BE29880DD000FDBBA1 /* CommentService */,
 				DAF058A4298740F600FDBBA1 /* PostAPIService */,
@@ -325,6 +328,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		DAF058E02989C04000FDBBA1 /* FavoritesService */ = {
+			isa = PBXGroup;
+			children = (
+				DAF058E12989C05700FDBBA1 /* FavoritesService.swift */,
+			);
+			path = FavoritesService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +441,7 @@
 				DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */,
 				DAF058D72988186E00FDBBA1 /* CommentsView.swift in Sources */,
 				DAF058B7298748C800FDBBA1 /* UIFontExtensions.swift in Sources */,
+				DAF058E22989C05700FDBBA1 /* FavoritesService.swift in Sources */,
 				DAF058CF2988183B00FDBBA1 /* PostDetailsRouter.swift in Sources */,
 				DAF058B42987446D00FDBBA1 /* PostListViewModel.swift in Sources */,
 				DAF058A82987413D00FDBBA1 /* PostService.swift in Sources */,

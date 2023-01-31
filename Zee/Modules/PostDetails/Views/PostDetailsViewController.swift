@@ -44,6 +44,7 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
         setupBinding()
         setupSubviews()
         setupConstraints()
+        setupFavoriteButton()
 
         animateLoadIndicator(isLoading: true)
 
@@ -69,6 +70,17 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
             userDetails.isHidden = false
             userDetails.setup(with: user)
         }
+    }
+
+    private func setupFavoriteButton() {
+        let image = model.post.isFavorite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        let action = UIAction { [weak self] _ in
+            self?.model.changeFavoriteStatus()
+            self?.setupFavoriteButton()
+        }
+        let button = UIBarButtonItem(image: image, primaryAction: action)
+
+        navigationItem.rightBarButtonItem = button
     }
 
     private func setupSubviews() {

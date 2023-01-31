@@ -15,6 +15,7 @@ protocol PostDetailModel {
     var didFinishLoadingDetails: (() -> Void)? { get set }
 
     func loadExtraInformation() async throws
+    func changeFavoriteStatus()
 }
 
 class PostDetailViewModel: PostDetailModel {
@@ -28,10 +29,15 @@ class PostDetailViewModel: PostDetailModel {
 
     private let userService: UserServiceProtocol
     private let commentService: CommentServiceProtocol
+    private let favoriteService: FavoriteServiceProtocol
 
-    init(post: Post, userService: UserServiceProtocol = UserService(), commentService: CommentServiceProtocol = CommentService()) {
+    init(post: Post,
+         userService: UserServiceProtocol = UserService(),
+         commentService: CommentServiceProtocol = CommentService(),
+         favoriteService: FavoriteServiceProtocol = FavoriteServices()) {
         self.userService = userService
         self.commentService = commentService
+        self.favoriteService = favoriteService
         self.post = post
     }
 
@@ -40,5 +46,14 @@ class PostDetailViewModel: PostDetailModel {
         user = try await userService.userDetails(post.userId)
         comments = try await commentService.commentsForPost(post.id)
         didFinishLoadingDetails?()
+    }
+
+    func changeFavoriteStatus() {
+        if post.isFavorite {
+            favoriteService.removeFromFavorites(post: post)
+        } else {
+            favoriteService.addToFavorites(post: post)
+        }
+        post.isFavorite.toggle()
     }
 }
