@@ -13,7 +13,7 @@ class PostListTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.font(named: "Helvetica", size: 14, weight: .bold)
+        label.font = UIFont.font(named: "Helvetica", size: 18, weight: .bold)
         return label
     }()
 

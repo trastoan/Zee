@@ -21,14 +21,16 @@ class PostListViewController: UIViewController, PostListView {
         return table
     }()
 
+    private let refreshControl = UIRefreshControl()
     private let loadingIndicator = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = model.title
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         setupTable()
+        setupDeleteAllButton()
         setupModelCallback()
 
         animateLoadIndicator(isLoading: true)
@@ -44,9 +46,20 @@ class PostListViewController: UIViewController, PostListView {
 
     private func setupModelCallback() {
         model.hasFinishedFetch = { [weak self] in
-            self?.animateLoadIndicator(isLoading: false)
             self?.postTable.reloadData()
+            self?.animateLoadIndicator(isLoading: false)
+            self?.refreshControl.endRefreshing()
         }
+    }
+
+    private func setupDeleteAllButton() {
+        let action = UIAction { [weak self] _ in
+            self?.model.deleteAllPosts()
+        }
+
+        let button = UIBarButtonItem(title: "Delete all", primaryAction: action)
+
+        navigationItem.rightBarButtonItem = button
     }
 
     private func setupTable() {
@@ -57,6 +70,13 @@ class PostListViewController: UIViewController, PostListView {
         
         postTable.rowHeight = UITableView.automaticDimension
         postTable.estimatedRowHeight = 44
+
+        refreshControl.addAction(UIAction(handler: { [weak self] _ in
+            Task {
+                try await self?.model.restoreAllPosts()
+            }
+        }), for: .valueChanged)
+        postTable.refreshControl = refreshControl
 
         setupSubviews()
         setupConstraints()
@@ -98,6 +118,13 @@ extension PostListViewController: UITableViewDataSource {
 extension PostListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         model.didSelectPost(at: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            model.deletePost(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+        }
     }
 }
 
