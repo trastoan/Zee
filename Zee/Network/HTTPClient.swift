@@ -7,34 +7,43 @@
 
 import Foundation
 
-public protocol HTTPClient {
+protocol HTTPClient {
     func requestObject<Model: Decodable>(endpoint: ServiceEndpoint) async throws -> Model
 }
 
-public enum HTTPClientError: Error, Equatable {
+enum HTTPClientError: Error, Equatable {
     case urlCreation
     case invalidObject
 }
 
-public struct HTTPWorker: HTTPClient {
+struct HTTPWorker: HTTPClient {
 
     let session: URLSession
+    let localClient: LocalClient
 
-    public init(session: URLSession = .shared) {
+    init(session: URLSession = .shared, localClient: LocalClient = LocalWorker()) {
         self.session = session
+        self.localClient = localClient
     }
 
-    public func requestObject<Model>(endpoint: ServiceEndpoint) async throws -> Model where Model: Decodable {
+    func requestObject<Model>(endpoint: ServiceEndpoint) async throws -> Model where Model: Decodable {
         let url = try url(from: endpoint)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method.value
-        let (data, _) = try await session.data(from: url)
 
         do {
+            let (data, _) = try await session.data(from: url)
             let result = try JSONDecoder().decode(Model.self, from: data)
+            try? localClient.storeData(data: data, endpoint: endpoint)
             return result
         } catch {
-            throw HTTPClientError.invalidObject
+            do {
+                let data = try localClient.retrieveData(endpoint: endpoint)
+                let result = try JSONDecoder().decode(Model.self, from: data)
+                return result
+            } catch {
+                throw LocalClientError.dataNotFound
+            }
         }
 
     }

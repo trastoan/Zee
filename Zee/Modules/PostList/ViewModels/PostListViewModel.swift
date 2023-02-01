@@ -13,8 +13,8 @@ protocol PostListModel {
     var numberOfPosts: Int { get}
 
     var hasFinishedFetch: (() -> Void)? { get set }
-    func fetch() async throws
-    func restoreAllPosts() async throws
+    func fetch()
+    func restoreAllPosts()
     func post(for index: Int) -> Post
     func didSelectPost(at index: Int)
     func deletePost(at index: Int)
@@ -47,9 +47,11 @@ final class PostListViewModel: PostListModel {
     }
 
     @MainActor
-    func fetch() async throws {
-        posts = try await service.listAllPosts()
-        parsePosts()
+    func fetch() {
+        Task {
+            posts = try await service.listAllPosts()
+            parsePosts()
+        }
     }
 
     func post(for index: Int) -> Post { posts[index] }
@@ -75,10 +77,12 @@ final class PostListViewModel: PostListModel {
     }
 
     @MainActor
-    func restoreAllPosts() async throws {
-        deletedService.restoreAll()
-        posts = try await service.listAllPosts()
-        parsePosts()
+    func restoreAllPosts() {
+        Task {
+            deletedService.restoreAll()
+            posts = try await service.listAllPosts()
+            parsePosts()
+        }
     }
 
     private func parsePosts() {

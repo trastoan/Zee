@@ -48,9 +48,7 @@ class PostDetailsViewController: UIViewController, PostDetailsController {
 
         animateLoadIndicator(isLoading: true)
 
-        Task {
-            try await model.loadExtraInformation()
-        }
+        model.loadExtraInformation()
     }
 
     private func setupBinding() {
