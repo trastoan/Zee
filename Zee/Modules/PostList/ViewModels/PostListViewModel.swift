@@ -70,7 +70,7 @@ final class PostListViewModel: PostListModel {
     func deleteAllPosts() {
         router.presentAlertForAllPostDeletion { [weak self] in
             self?.deletedService.deleteAll()
-            self?.hasFinishedFetch?()
+            self?.parsePosts()
         }
     }
 

@@ -21,6 +21,7 @@ class PostListViewController: UIViewController, PostListView {
         return table
     }()
 
+    private let refreshControl = UIRefreshControl()
     private let loadingIndicator = UIActivityIndicatorView()
 
     override func viewDidLoad() {
@@ -47,6 +48,7 @@ class PostListViewController: UIViewController, PostListView {
         model.hasFinishedFetch = { [weak self] in
             self?.postTable.reloadData()
             self?.animateLoadIndicator(isLoading: false)
+            self?.refreshControl.endRefreshing()
         }
     }
 
@@ -68,6 +70,13 @@ class PostListViewController: UIViewController, PostListView {
         
         postTable.rowHeight = UITableView.automaticDimension
         postTable.estimatedRowHeight = 44
+
+        refreshControl.addAction(UIAction(handler: { [weak self] _ in
+            Task {
+                try await self?.model.restoreAllPosts()
+            }
+        }), for: .valueChanged)
+        postTable.refreshControl = refreshControl
 
         setupSubviews()
         setupConstraints()
