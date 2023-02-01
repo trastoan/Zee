@@ -28,8 +28,8 @@ class DeleteService: DeleteServiceProtocol {
     }
 
     private var deletededAll: Bool {
-        get { userDefaults.bool(forKey: deletedIDKey) }
-        set { userDefaults.setValue(newValue, forKey: deletedIDKey) }
+        get { userDefaults.bool(forKey: deletedAllKey) }
+        set { userDefaults.setValue(newValue, forKey: deletedAllKey) }
     }
 
     init(userDefaults: UserDefaults = .standard) {
