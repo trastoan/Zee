@@ -14,9 +14,11 @@ protocol PostListModel {
 
     var hasFinishedFetch: (() -> Void)? { get set }
     func fetch() async throws
+    func restoreAllPosts() async throws
     func post(for index: Int) -> Post
     func didSelectPost(at index: Int)
     func deletePost(at index: Int)
+    func deleteAllPosts()
     func viewDidAppear()
 }
 
@@ -65,9 +67,23 @@ final class PostListViewModel: PostListModel {
         posts.remove(at: index)
     }
 
+    func deleteAllPosts() {
+        router.presentAlertForAllPostDeletion { [weak self] in
+            self?.deletedService.deleteAll()
+            self?.hasFinishedFetch?()
+        }
+    }
+
+    @MainActor
+    func restoreAllPosts() async throws {
+        deletedService.restoreAll()
+        posts = try await service.listAllPosts()
+        parsePosts()
+    }
+
     private func parsePosts() {
-        posts = deletedService.parseDeleted(posts: posts)
         posts = favoriteService.parseFavorites(posts: posts)
+        posts = deletedService.parseDeleted(posts: posts)
         posts.sort(by: { $0.isFavorite && !$1.isFavorite })
         hasFinishedFetch?()
     }

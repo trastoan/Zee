@@ -46,7 +46,11 @@ class DeleteService: DeleteServiceProtocol {
 
     func parseDeleted(posts: [Post]) -> [Post] {
         let deleted = deletedID
-        return posts.filter { !deleted.contains($0.id) }
+        if deletededAll {
+            return posts.filter { $0.isFavorite == true }
+        } else {
+            return posts.filter { !deleted.contains($0.id) }
+        }
     }
 
     func restoreAll() {

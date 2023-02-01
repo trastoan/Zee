@@ -29,6 +29,7 @@ class PostListViewController: UIViewController, PostListView {
         view.backgroundColor = .systemBackground
 
         setupTable()
+        setupDeleteAllButton()
         setupModelCallback()
 
         animateLoadIndicator(isLoading: true)
@@ -47,6 +48,16 @@ class PostListViewController: UIViewController, PostListView {
             self?.postTable.reloadData()
             self?.animateLoadIndicator(isLoading: false)
         }
+    }
+
+    private func setupDeleteAllButton() {
+        let action = UIAction { [weak self] _ in
+            self?.model.deleteAllPosts()
+        }
+
+        let button = UIBarButtonItem(title: "Delete all", primaryAction: action)
+
+        navigationItem.rightBarButtonItem = button
     }
 
     private func setupTable() {
