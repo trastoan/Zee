@@ -14,7 +14,7 @@ protocol PostDetailModel {
     var comments: [Comment] { get }
     var didFinishLoadingDetails: (() -> Void)? { get set }
 
-    func loadExtraInformation() async throws
+    func loadExtraInformation()
     func changeFavoriteStatus()
 }
 
@@ -42,10 +42,12 @@ class PostDetailViewModel: PostDetailModel {
     }
 
     @MainActor
-    func loadExtraInformation() async throws {
-        user = try await userService.userDetails(post.userId)
-        comments = try await commentService.commentsForPost(post.id)
-        didFinishLoadingDetails?()
+    func loadExtraInformation() {
+        Task {
+            user = try? await userService.userDetails(post.userId)
+            comments = try await commentService.commentsForPost(post.id)
+            didFinishLoadingDetails?()
+        }
     }
 
     func changeFavoriteStatus() {

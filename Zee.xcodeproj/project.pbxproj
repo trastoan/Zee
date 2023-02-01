@@ -44,6 +44,7 @@
 		DAF058DD2988845700FDBBA1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058DC2988845700FDBBA1 /* StringExtension.swift */; };
 		DAF058E22989C05700FDBBA1 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF058E12989C05700FDBBA1 /* FavoritesService.swift */; };
 		DAF059182989CEBB00FDBBA1 /* DeletedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF059172989CEBB00FDBBA1 /* DeletedService.swift */; };
+		DAF0591B298B09F300FDBBA1 /* LocalClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0591A298B09F300FDBBA1 /* LocalClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DAF058DC2988845700FDBBA1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAF058E12989C05700FDBBA1 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		DAF059172989CEBB00FDBBA1 /* DeletedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedService.swift; sourceTree = "<group>"; };
+		DAF0591A298B09F300FDBBA1 /* LocalClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				DAF058B5298748B600FDBBA1 /* Extensions */,
 				DAF058A3298740E700FDBBA1 /* Services */,
 				DAF0589C29873E4800FDBBA1 /* Models */,
+				DAF05919298B09CD00FDBBA1 /* LocalCache */,
 				DAF0589129873CBC00FDBBA1 /* Network */,
 				DAF0588D29873B9300FDBBA1 /* Modules */,
 				DAF0585D29873B0C00FDBBA1 /* AppDelegate.swift */,
@@ -347,6 +350,14 @@
 			path = DeletedService;
 			sourceTree = "<group>";
 		};
+		DAF05919298B09CD00FDBBA1 /* LocalCache */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0591A298B09F300FDBBA1 /* LocalClient.swift */,
+			);
+			path = LocalCache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +473,7 @@
 				DAF0585E29873B0C00FDBBA1 /* AppDelegate.swift in Sources */,
 				DAF058A229873EFB00FDBBA1 /* User.swift in Sources */,
 				DAF0589529873CF000FDBBA1 /* ServiceEndpoint.swift in Sources */,
+				DAF0591B298B09F300FDBBA1 /* LocalClient.swift in Sources */,
 				DAF058B22987445900FDBBA1 /* PostListTableViewCell.swift in Sources */,
 				DAF058DB29887BF400FDBBA1 /* CommentTableViewCell.swift in Sources */,
 				DAF058D12988184500FDBBA1 /* PostDetailsViewModel.swift in Sources */,
