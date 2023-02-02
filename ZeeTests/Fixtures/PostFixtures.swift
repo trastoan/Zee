@@ -12,4 +12,9 @@ struct PostFixtures {
     static func postsArray() -> [Post] {
         JsonLoader().loadJson(named: "Posts")!
     }
+
+    static func post() -> Post {
+        let posts: [Post] = JsonLoader().loadJson(named: "Posts")!
+        return posts.first!
+    }
 }

@@ -13,24 +13,24 @@ protocol PostDetailModel {
     var user: User? { get }
     var comments: [Comment] { get }
     var didFinishLoadingDetails: (() -> Void)? { get set }
-
-    func loadExtraInformation()
+    
+    func loadExtraInformation() async throws
     func changeFavoriteStatus()
 }
 
 class PostDetailViewModel: PostDetailModel {
     var title: String { "Details" }
-
+    
     var post: Post
     var user: User?
     var comments: [Comment] = []
-
+    
     var didFinishLoadingDetails: (() -> Void)?
-
+    
     private let userService: UserServiceProtocol
     private let commentService: CommentServiceProtocol
     private let favoriteService: FavoriteServiceProtocol
-
+    
     init(post: Post,
          userService: UserServiceProtocol = UserService(),
          commentService: CommentServiceProtocol = CommentService(),
@@ -40,16 +40,14 @@ class PostDetailViewModel: PostDetailModel {
         self.favoriteService = favoriteService
         self.post = post
     }
-
+    
     @MainActor
-    func loadExtraInformation() {
-        Task {
-            user = try? await userService.userDetails(post.userId)
-            comments = try await commentService.commentsForPost(post.id)
-            didFinishLoadingDetails?()
-        }
+    func loadExtraInformation() async throws {
+        user = try? await userService.userDetails(post.userId)
+        comments = try await commentService.commentsForPost(post.id)
+        didFinishLoadingDetails?()
     }
-
+    
     func changeFavoriteStatus() {
         if post.isFavorite {
             favoriteService.removeFromFavorites(post: post)
