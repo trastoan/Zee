@@ -35,7 +35,9 @@ class PostListViewController: UIViewController, PostListView {
 
         animateLoadIndicator(isLoading: true)
 
-        model.fetch()
+        Task {
+            try await model.fetch()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +72,9 @@ class PostListViewController: UIViewController, PostListView {
         postTable.estimatedRowHeight = 44
 
         refreshControl.addAction(UIAction(handler: { [weak self] _ in
-            self?.model.restoreAllPosts()
+            Task {
+                try await self?.model.restoreAllPosts()
+            }
         }), for: .valueChanged)
         postTable.refreshControl = refreshControl
 

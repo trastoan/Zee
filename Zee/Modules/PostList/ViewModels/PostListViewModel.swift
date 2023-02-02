@@ -13,8 +13,8 @@ protocol PostListModel {
     var numberOfPosts: Int { get}
 
     var hasFinishedFetch: (() -> Void)? { get set }
-    func fetch()
-    func restoreAllPosts()
+    func fetch() async throws
+    func restoreAllPosts() async throws
     func post(for index: Int) -> Post
     func didSelectPost(at index: Int)
     func deletePost(at index: Int)
@@ -37,8 +37,8 @@ final class PostListViewModel: PostListModel {
     var hasFinishedFetch: (() -> Void)?
 
     init(router: PostListRouterProtocol,
-        service: PostServiceProtocol = PostService(),
-        favoriteService: FavoriteServiceProtocol = FavoriteServices(),
+         service: PostServiceProtocol = PostService(),
+         favoriteService: FavoriteServiceProtocol = FavoriteServices(),
          deletedService: DeleteServiceProtocol = DeleteService()) {
         self.router = router
         self.service = service
@@ -47,11 +47,9 @@ final class PostListViewModel: PostListModel {
     }
 
     @MainActor
-    func fetch() {
-        Task {
-            posts = try await service.listAllPosts()
-            parsePosts()
-        }
+    func fetch() async throws {
+        posts = try await service.listAllPosts()
+        parsePosts()
     }
 
     func post(for index: Int) -> Post { posts[index] }
@@ -71,18 +69,17 @@ final class PostListViewModel: PostListModel {
 
     func deleteAllPosts() {
         router.presentAlertForAllPostDeletion { [weak self] in
-            self?.deletedService.deleteAll()
-            self?.parsePosts()
+            guard let self else { return }
+            self.deletedService.deleteAll(posts: self.posts)
+            self.parsePosts()
         }
     }
 
     @MainActor
-    func restoreAllPosts() {
-        Task {
-            deletedService.restoreAll()
-            posts = try await service.listAllPosts()
-            parsePosts()
-        }
+    func restoreAllPosts() async throws {
+        deletedService.restoreAll()
+        posts = try await service.listAllPosts()
+        parsePosts()
     }
 
     private func parsePosts() {

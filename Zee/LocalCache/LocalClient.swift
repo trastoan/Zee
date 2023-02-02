@@ -46,6 +46,13 @@ struct LocalWorker: LocalClient {
         }
     }
 
+    @discardableResult
+    func removeData(endpoint: ServiceEndpoint) throws -> Bool {
+        let filemanager = FileManager.default
+        try filemanager.removeItem(at: buildURL(endpoint: endpoint))
+        return true
+    }
+
     private func buildURL(endpoint: ServiceEndpoint) throws -> URL {
         var urlComponent = URLComponents(string: endpoint.baseUrl)
         urlComponent?.path = endpoint.path
