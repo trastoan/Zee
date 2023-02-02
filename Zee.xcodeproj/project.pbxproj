@@ -61,6 +61,7 @@
 		DAF0593F298C667F00FDBBA1 /* CommentsFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0593E298C667F00FDBBA1 /* CommentsFixtures.swift */; };
 		DAF05942298C6D7E00FDBBA1 /* UIFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05941298C6D7E00FDBBA1 /* UIFontExtensionTests.swift */; };
 		DAF05944298C705900FDBBA1 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05943298C705900FDBBA1 /* StringExtensionTests.swift */; };
+		DAF05946298C72C100FDBBA1 /* APIServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05945298C72C100FDBBA1 /* APIServicesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		DAF0593E298C667F00FDBBA1 /* CommentsFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFixtures.swift; sourceTree = "<group>"; };
 		DAF05941298C6D7E00FDBBA1 /* UIFontExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensionTests.swift; sourceTree = "<group>"; };
 		DAF05943298C705900FDBBA1 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		DAF05945298C72C100FDBBA1 /* APIServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServicesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +404,7 @@
 			children = (
 				DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */,
 				DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */,
+				DAF05945298C72C100FDBBA1 /* APIServicesTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				DAF05944298C705900FDBBA1 /* StringExtensionTests.swift in Sources */,
 				DAF05939298C65CD00FDBBA1 /* PostDetailsViewModelTests.swift in Sources */,
 				DAF05942298C6D7E00FDBBA1 /* UIFontExtensionTests.swift in Sources */,
+				DAF05946298C72C100FDBBA1 /* APIServicesTests.swift in Sources */,
 				DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

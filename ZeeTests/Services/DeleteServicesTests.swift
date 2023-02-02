@@ -40,7 +40,7 @@ final class DeleteServicesTests: XCTestCase {
     }
 
     func test_whenDeletedAll_noPostShouldBeReturned() {
-        sut.deleteAll()
+        sut.deleteAll(posts: mockedPosts)
 
         let parsed = sut.parseDeleted(posts: mockedPosts)
 
@@ -48,7 +48,7 @@ final class DeleteServicesTests: XCTestCase {
     }
 
     func test_whenRestoringAll_allPostShouldBeReturn() {
-        sut.deleteAll()
+        sut.deleteAll(posts: mockedPosts)
 
         let deletedParsed = sut.parseDeleted(posts: mockedPosts)
 

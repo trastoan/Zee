@@ -9,14 +9,11 @@ import Foundation
 
 enum PostEndpoint: ServiceEndpoint {
     case allPosts
-    case deletePost(postId: Int)
 
     var path: String {
         switch self {
         case .allPosts:
             return "/posts"
-        case .deletePost(let id):
-            return "/posts/\(id)"
         }
     }
 
@@ -28,8 +25,6 @@ enum PostEndpoint: ServiceEndpoint {
         switch self {
         case .allPosts:
             return .get
-        case .deletePost:
-            return .delete
         }
     }
 }

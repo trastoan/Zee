@@ -12,7 +12,7 @@ protocol DeleteServiceProtocol {
     func removeFromDeleted(post: Post)
     func parseDeleted(posts: [Post]) -> [Post]
     func restoreAll()
-    func deleteAll()
+    func deleteAll(posts: [Post])
 }
 
 class DeleteService: DeleteServiceProtocol {
@@ -20,16 +20,10 @@ class DeleteService: DeleteServiceProtocol {
     var userDefaults: UserDefaults
 
     private let deletedIDKey = "deletedIDList"
-    private let deletedAllKey = "deletedAll"
 
     private var deletedID: [Int] {
         get { userDefaults.array(forKey: deletedIDKey) as? [Int] ?? [] }
         set { userDefaults.setValue(newValue, forKey: deletedIDKey) }
-    }
-
-    private var deletededAll: Bool {
-        get { userDefaults.bool(forKey: deletedAllKey) }
-        set { userDefaults.setValue(newValue, forKey: deletedAllKey) }
     }
 
     init(userDefaults: UserDefaults = .standard) {
@@ -46,20 +40,17 @@ class DeleteService: DeleteServiceProtocol {
 
     func parseDeleted(posts: [Post]) -> [Post] {
         let deleted = deletedID
-        if deletededAll {
-            return posts.filter { $0.isFavorite == true }
-        } else {
-            return posts.filter { !deleted.contains($0.id) }
-        }
+        return posts.filter { !deleted.contains($0.id) }
     }
 
     func restoreAll() {
         deletedID = []
-        deletededAll = false
     }
 
-    func deleteAll() {
-        deletededAll = true
+    func deleteAll(posts: [Post]) {
+        posts.forEach {
+            if $0.isFavorite == false { addToDeleted(post: $0) }
+        }
     }
 
 }

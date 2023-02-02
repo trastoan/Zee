@@ -92,6 +92,8 @@ final class PostListViewModelTests: XCTestCase {
         XCTAssertEqual(sut.numberOfPosts, 3)
 
         mockFavoriteService.addToFavorites(post: sut.post(for: 0))
+        try await sut.fetch()
+        print(sut.post(for: 0).isFavorite)
         sut.deleteAllPosts()
         XCTAssertEqual(sut.numberOfPosts, 1)
 
