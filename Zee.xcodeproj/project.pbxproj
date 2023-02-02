@@ -53,6 +53,8 @@
 		DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */; };
 		DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */; };
 		DAF05930298C535000FDBBA1 /* DeleteServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */; };
+		DAF05933298C5CB400FDBBA1 /* PostListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05932298C5CB400FDBBA1 /* PostListViewModelTests.swift */; };
+		DAF05935298C5D5100FDBBA1 /* PostListSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05934298C5D5100FDBBA1 /* PostListSpies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceTest.swift; sourceTree = "<group>"; };
 		DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFixtures.swift; sourceTree = "<group>"; };
 		DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServicesTests.swift; sourceTree = "<group>"; };
+		DAF05932298C5CB400FDBBA1 /* PostListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelTests.swift; sourceTree = "<group>"; };
+		DAF05934298C5D5100FDBBA1 /* PostListSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListSpies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		DAF0587329873B0C00FDBBA1 /* ZeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAF05931298C5BA200FDBBA1 /* Modules */,
 				DAF0592C298C50C400FDBBA1 /* Fixtures */,
 				DAF05927298C427200FDBBA1 /* LocalCacheTests */,
 				DAF05924298C3E8B00FDBBA1 /* Utils */,
@@ -422,6 +427,15 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		DAF05931298C5BA200FDBBA1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DAF05932298C5CB400FDBBA1 /* PostListViewModelTests.swift */,
+				DAF05934298C5D5100FDBBA1 /* PostListSpies.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -569,9 +583,11 @@
 				DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */,
 				DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */,
 				DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */,
+				DAF05935298C5D5100FDBBA1 /* PostListSpies.swift in Sources */,
 				DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */,
 				DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */,
 				DAF05930298C535000FDBBA1 /* DeleteServicesTests.swift in Sources */,
+				DAF05933298C5CB400FDBBA1 /* PostListViewModelTests.swift in Sources */,
 				DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

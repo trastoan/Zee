@@ -9,7 +9,6 @@ import Foundation
 
 protocol PostServiceProtocol {
     func listAllPosts() async throws -> [Post]
-    func deletePost(_ id: Int) async throws -> Bool
 }
 
 struct PostService: PostServiceProtocol {
@@ -21,10 +20,5 @@ struct PostService: PostServiceProtocol {
 
     func listAllPosts() async throws -> [Post] {
         try await client.requestObject(endpoint: PostEndpoint.allPosts)
-    }
-
-    func deletePost(_ id: Int) async throws -> Bool {
-        //MARK: TODO
-        return true
     }
 }
