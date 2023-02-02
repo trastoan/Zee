@@ -53,6 +53,21 @@ final class MazeNetworkTests: XCTestCase {
         }
     }
 
+    func test_invalidDataShould_withCache_Decode() async {
+        let mocker = Mocker(statusCode: 200)
+        mocker.testData = "1234".data(using: .utf8)
+        URLProtocolMock.mock = mocker
+        insertLocalData(on: MockRoute.goodRoute)
+
+        do {
+            let mockedItem: MockItem = try await sut.requestObject(endpoint: MockRoute.goodRoute)
+            XCTAssertEqual(mockedItem.testString, "Test")
+            removeLocalData(on: MockRoute.goodRoute)
+        } catch {
+            XCTFail("Should not be throwing a error")
+        }
+    }
+
     func test_url_shouldThrow_urlCreation() {
         do {
             _ = try sut.url(from: MockRoute.throwableRoute)
@@ -87,8 +102,25 @@ final class MazeNetworkTests: XCTestCase {
         }
     }
 
-    private func insertLocalData() {
+    private func insertLocalData(on endpoint: ServiceEndpoint) {
+        guard let testData = MockItem.mockedData() else {
+            XCTFail("Should have valid data")
+            return
+        }
 
+        do {
+            try localSut.storeData(data: testData, endpoint: endpoint)
+        } catch {
+            XCTFail("Unable to save date")
+        }
+    }
+
+    private func removeLocalData(on endpoint: ServiceEndpoint) {
+        do {
+            try localSut.removeData(endpoint: endpoint)
+        } catch {
+            XCTFail("Unable to save date")
+        }
     }
 }
 
