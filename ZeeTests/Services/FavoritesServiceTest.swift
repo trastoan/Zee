@@ -9,17 +9,19 @@ import XCTest
 @testable import Zee
 
 final class FavoritesServiceTest: XCTestCase {
-    var sut: FavoriteServices!
-    var posts: [Post]!
+    private var sut: FavoriteServices!
+    private var userDefaults: UserDefaults!
+    private var posts: [Post]!
 
     override func setUp() {
-        sut = FavoriteServices(userDefaults: UserDefaults(suiteName: "TestSuite")!)
+        userDefaults = UserDefaults(suiteName: #file)!
+        sut = FavoriteServices(userDefaults: userDefaults)
         posts = PostFixtures.postsArray()
     }
 
     override func tearDown() {
         sut = nil
-        UserDefaults().removeSuite(named: "TestSuite")
+        userDefaults.removePersistentDomain(forName: #file)
     }
 
     func testFavorites_atFirst_shouldBeEmpty() {

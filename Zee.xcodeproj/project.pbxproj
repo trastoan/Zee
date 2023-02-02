@@ -52,6 +52,7 @@
 		DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */; };
 		DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */; };
 		DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */; };
+		DAF05930298C535000FDBBA1 /* DeleteServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheTests.swift; sourceTree = "<group>"; };
 		DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceTest.swift; sourceTree = "<group>"; };
 		DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFixtures.swift; sourceTree = "<group>"; };
+		DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServicesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */,
+				DAF0592F298C535000FDBBA1 /* DeleteServicesTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */,
 				DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */,
 				DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */,
+				DAF05930298C535000FDBBA1 /* DeleteServicesTests.swift in Sources */,
 				DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
