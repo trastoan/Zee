@@ -9,7 +9,6 @@ import Foundation
 
 protocol DeleteServiceProtocol {
     func addToDeleted(post: Post)
-    func removeFromDeleted(post: Post)
     func parseDeleted(posts: [Post]) -> [Post]
     func restoreAll()
     func deleteAll(posts: [Post])
@@ -32,10 +31,6 @@ class DeleteService: DeleteServiceProtocol {
     
     func addToDeleted(post: Post) {
         deletedID.append(post.id)
-    }
-
-    func removeFromDeleted(post: Post) {
-        deletedID.removeAll(where: { $0 == post.id })
     }
 
     func parseDeleted(posts: [Post]) -> [Post] {
