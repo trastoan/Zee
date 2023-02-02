@@ -45,7 +45,7 @@ final class MazeNetworkTests: XCTestCase {
             let _: MockItem = try await sut.requestObject(endpoint: MockRoute.goodRoute)
         } catch {
             guard let clientError = error as? LocalClientError else {
-                XCTFail("It should be a HTTPClientError")
+                XCTFail("It should be a LocalClientError")
                 return
             }
             XCTAssertNotNil(clientError)

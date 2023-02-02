@@ -49,6 +49,7 @@
 		DAF05921298C3DEC00FDBBA1 /* Comments.json in Resources */ = {isa = PBXBuildFile; fileRef = DAF05920298C3DEC00FDBBA1 /* Comments.json */; };
 		DAF05923298C3DFC00FDBBA1 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = DAF05922298C3DFC00FDBBA1 /* Users.json */; };
 		DAF05926298C3E9E00FDBBA1 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05925298C3E9E00FDBBA1 /* JsonLoader.swift */; };
+		DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		DAF05920298C3DEC00FDBBA1 /* Comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comments.json; sourceTree = "<group>"; };
 		DAF05922298C3DFC00FDBBA1 /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		DAF05925298C3E9E00FDBBA1 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		DAF0587329873B0C00FDBBA1 /* ZeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAF05927298C427200FDBBA1 /* LocalCacheTests */,
 				DAF05924298C3E8B00FDBBA1 /* Utils */,
 				DAF0591D298C3DBF00FDBBA1 /* MockedJsons */,
 				DAF0591C298C38EE00FDBBA1 /* Services */,
@@ -394,6 +397,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DAF05927298C427200FDBBA1 /* LocalCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */,
+			);
+			path = LocalCacheTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +550,7 @@
 			files = (
 				DAF05926298C3E9E00FDBBA1 /* JsonLoader.swift in Sources */,
 				DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */,
+				DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */,
 				DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */,
 				DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */,
 			);
