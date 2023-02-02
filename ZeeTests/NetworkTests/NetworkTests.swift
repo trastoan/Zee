@@ -10,6 +10,7 @@ import XCTest
 
 final class MazeNetworkTests: XCTestCase {
     var sut: HTTPWorker!
+    var localSut: LocalWorker!
 
     override func setUp() {
         super.setUp()
@@ -18,6 +19,7 @@ final class MazeNetworkTests: XCTestCase {
         let mockSession = URLSession(configuration: config)
 
         sut = HTTPWorker(session: mockSession)
+        localSut = LocalWorker()
     }
 
     func test_should_decode() async throws {
@@ -34,7 +36,7 @@ final class MazeNetworkTests: XCTestCase {
         XCTAssertEqual(decoded.testString, "Test")
     }
 
-    func test_invalidDataShould_throwDecode() async {
+    func test_invalidDataShould_withNoCache_throwError() async {
         let mocker = Mocker(statusCode: 200)
         mocker.testData = "1234".data(using: .utf8)
         URLProtocolMock.mock = mocker
@@ -42,12 +44,12 @@ final class MazeNetworkTests: XCTestCase {
         do {
             let _: MockItem = try await sut.requestObject(endpoint: MockRoute.goodRoute)
         } catch {
-            guard let clientError = error as? HTTPClientError else {
+            guard let clientError = error as? LocalClientError else {
                 XCTFail("It should be a HTTPClientError")
                 return
             }
             XCTAssertNotNil(clientError)
-            XCTAssertEqual(clientError, .invalidObject)
+            XCTAssertEqual(clientError, .dataNotFound)
         }
     }
 
@@ -83,6 +85,10 @@ final class MazeNetworkTests: XCTestCase {
         } catch {
             XCTFail("It should not fail")
         }
+    }
+
+    private func insertLocalData() {
+
     }
 }
 
