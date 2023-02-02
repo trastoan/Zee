@@ -50,6 +50,8 @@
 		DAF05923298C3DFC00FDBBA1 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = DAF05922298C3DFC00FDBBA1 /* Users.json */; };
 		DAF05926298C3E9E00FDBBA1 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05925298C3E9E00FDBBA1 /* JsonLoader.swift */; };
 		DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */; };
+		DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */; };
+		DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		DAF05922298C3DFC00FDBBA1 /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		DAF05925298C3E9E00FDBBA1 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheTests.swift; sourceTree = "<group>"; };
+		DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceTest.swift; sourceTree = "<group>"; };
+		DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFixtures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		DAF0587329873B0C00FDBBA1 /* ZeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0592C298C50C400FDBBA1 /* Fixtures */,
 				DAF05927298C427200FDBBA1 /* LocalCacheTests */,
 				DAF05924298C3E8B00FDBBA1 /* Utils */,
 				DAF0591D298C3DBF00FDBBA1 /* MockedJsons */,
@@ -375,6 +380,7 @@
 		DAF0591C298C38EE00FDBBA1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAF0592A298C503F00FDBBA1 /* FavoritesServiceTest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +409,14 @@
 				DAF05928298C428600FDBBA1 /* LocalCacheTests.swift */,
 			);
 			path = LocalCacheTests;
+			sourceTree = "<group>";
+		};
+		DAF0592C298C50C400FDBBA1 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0592D298C50D300FDBBA1 /* PostFixtures.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,8 +565,10 @@
 				DAF05926298C3E9E00FDBBA1 /* JsonLoader.swift in Sources */,
 				DAF0589B29873D5F00FDBBA1 /* NetworkTests.swift in Sources */,
 				DAF05929298C428600FDBBA1 /* LocalCacheTests.swift in Sources */,
+				DAF0592B298C503F00FDBBA1 /* FavoritesServiceTest.swift in Sources */,
 				DAF0589929873D3400FDBBA1 /* NetworkMockTests.swift in Sources */,
 				DAF0587529873B0C00FDBBA1 /* ZeeTests.swift in Sources */,
+				DAF0592E298C50D300FDBBA1 /* PostFixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
